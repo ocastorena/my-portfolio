@@ -3,10 +3,10 @@ import { Mail, Download } from "lucide-react";
 
 export function Contact() {
   return (
-    <section className="py-16 px-4 bg-zinc-900 text-white text-center">
+    <section className="py-16 px-4 bg-surface text-surface-foreground text-center">
       <div className="max-w-xl mx-auto space-y-6">
         <h2 className="text-4xl font-bold">Let's Work Together</h2>
-        <p className="text-zinc-400 text-lg">
+        <p className="text-muted-foreground text-lg">
           Whether you're hiring, looking to collaborate, or just want to say hi
           — feel free to reach out.
         </p>

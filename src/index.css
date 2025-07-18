@@ -1,7 +1,24 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Inter", sans-serif;
   background-color: var(--color-zinc-900);
+}
+
+@theme {
+  --color-background: #0d1117;
+  --color-foreground: #e6e6e6;
+  --color-accent: #22d3ee;
+  --color-accent-foreground: #000;
+  --color-muted: #71717a;
+  --color-muted-foreground: #a1a1aa;
+  --color-surface: #1a1b1e;
+  --color-surface-foreground: #e0e0e0;
+  --color-brand: #c084fc;
+  --color-brand-glow: #c084fc99;
 }
