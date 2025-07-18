@@ -12,13 +12,19 @@ export function Contact() {
         </p>
         <div className="flex justify-center gap-4 flex-wrap">
           <a href="mailto:you@example.com" className="inline-flex items-center">
-            <Button className="transition-transform hover:scale-105" variant="default">
+            <Button
+              className="transition-transform hover:scale-105"
+              variant="default"
+            >
               <Mail className="mr-2 h-4 w-4" />
               Email Me
             </Button>
           </a>
           <a href="/resume.pdf" download className="inline-flex items-center">
-            <Button className="transition-transform hover:scale-105" variant="secondary">
+            <Button
+              className="transition-transform hover:scale-105"
+              variant="secondary"
+            >
               <Download className="mr-2 h-4 w-4" />
               Download Resume
             </Button>
