@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import NET from "vanta/src/vanta.net";
-import { Button } from "./ui/button";
 
 export function Hero() {
   const heroRef = useRef(null);
@@ -34,7 +33,7 @@ export function Hero() {
   return (
     <section
       ref={heroRef}
-      className="relative w-full h-screen bg-background text-foreground"
+      className="relative w-full h-[calc(95vh+3rem)] -mt-12 bg-background text-foreground"
     >
       <div className="absolute inset-0 z-10 flex flex-col justify-center items-center text-center px-4 bg-black/40 backdrop-blur-xs">
         <h1 className="text-5xl font-bold mb-4">Hi, I'm Omar 👋</h1>
@@ -42,9 +41,17 @@ export function Hero() {
           I'm a full-stack developer with experience in React, Node.js, and
           firmware. I love building beautiful and secure software.
         </p>
-        <Button className="bg-accent text-accent-foreground hover:shadow-[0_0_12px_var(--color-accent)] transition">
-          View My Work
-        </Button>
+        <button
+          onClick={() =>
+            document
+              .getElementById("section-2")
+              ?.scrollIntoView({ behavior: "smooth", block: "center" })
+          }
+          className="absolute bottom-50 flex justify-center w-12 h-12 items-center mx-auto rounded-full bg-accent text-background text-2xl animate-bounce hover:text-accent-foreground transition"
+          aria-label="Scroll to About section"
+        >
+          ↓
+        </button>
       </div>
     </section>
   );

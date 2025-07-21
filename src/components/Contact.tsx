@@ -3,7 +3,10 @@ import { Mail, Download } from "lucide-react";
 
 export function Contact() {
   return (
-    <section className="py-16 px-4 bg-surface text-surface-foreground text-center">
+    <section
+      id="contact"
+      className="py-16 px-4 bg-surface text-surface-foreground text-center"
+    >
       <div className="max-w-xl mx-auto space-y-6">
         <h2 className="text-4xl font-bold">Let's Work Together</h2>
         <p className="text-muted-foreground text-lg">
@@ -14,16 +17,20 @@ export function Contact() {
           <a href="mailto:you@example.com" className="inline-flex items-center">
             <Button
               className="transition-transform hover:scale-105"
-              variant="default"
+              variant="ghost"
             >
               <Mail className="mr-2 h-4 w-4" />
               Email Me
             </Button>
           </a>
-          <a href="/resume.pdf" download className="inline-flex items-center">
+          <a
+            href="/omar-castorena-resume.pdf"
+            download
+            className="inline-flex items-center"
+          >
             <Button
               className="transition-transform hover:scale-105"
-              variant="secondary"
+              variant="ghost"
             >
               <Download className="mr-2 h-4 w-4" />
               Download Resume

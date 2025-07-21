@@ -24,7 +24,7 @@ export function Navbar() {
           className="hover:text-accent hover:underline underline-offset-4 transition"
           onClick={() => {
             document
-              .getElementById("projects")
+              .getElementById("about")
               ?.scrollIntoView({ behavior: "smooth" });
           }}
         >
@@ -35,7 +35,7 @@ export function Navbar() {
           className="hover:text-accent hover:underline underline-offset-4 transition"
           onClick={() => {
             document
-              .getElementById("projects")
+              .getElementById("contact")
               ?.scrollIntoView({ behavior: "smooth" });
           }}
         >

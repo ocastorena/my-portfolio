@@ -1,6 +1,9 @@
 export function About() {
   return (
-    <section className="py-16 px-4 bg-surface text-surface-foreground">
+    <section
+      id="about"
+      className="py-16 px-4 bg-surface text-surface-foreground"
+    >
       <div className="max-w-4xl mx-auto text-center space-y-6">
         <h2 className="text-4xl font-bold">About Me</h2>
         <p className="text-muted-foreground text-lg">

@@ -11,8 +11,10 @@ function App() {
     <div className="bg-background text-foreground min-h-screen">
       <Navbar />
       <Hero />
-      <About />
-      <Skills />
+      <div id="section-2">
+        <About />
+        <Skills />
+      </div>
       <Projects />
       <Contact />
       <Footer />

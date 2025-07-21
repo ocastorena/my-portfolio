@@ -36,7 +36,7 @@ export function Skills() {
                 {items.map((skill) => (
                   <li
                     key={skill}
-                    className="bg-background border border-muted px-3 py-1 rounded-md text-sm"
+                    className="bg-background border border-muted px-3 py-1 rounded-md text-sm transition hover:scale-[1.02] hover:shadow-[0_0_12px_var(--color-brand-glow)]"
                   >
                     {skill}
                   </li>
