@@ -5,7 +5,7 @@ import NET from "vanta/src/vanta.net";
 export function Hero() {
   const heroRef = useRef(null);
   const [vantaEffect, setVantaEffect] = useState<ReturnType<typeof NET> | null>(
-    null
+    null,
   );
 
   useEffect(() => {
@@ -22,7 +22,7 @@ export function Hero() {
           scaleMobile: 1.0,
           color: 0x22d3ee,
           backgroundColor: 0x0a0d13,
-        })
+        }),
       );
     }
     return () => {
@@ -33,21 +33,23 @@ export function Hero() {
   return (
     <section
       ref={heroRef}
-      className="relative w-full h-[calc(95vh+3rem)] -mt-12 bg-background text-foreground"
+      className="bg-background text-foreground relative -mt-12 h-[calc(96vh+3rem)] w-full"
     >
-      <div className="absolute inset-0 z-10 flex flex-col justify-center items-center text-center px-4 bg-black/40 backdrop-blur-xs">
-        <h1 className="text-5xl font-bold mb-4">Hi, I'm Omar 👋</h1>
-        <p className="text-lg max-w-xl text-muted-foreground mb-6">
-          I'm a full-stack developer with experience in React, Node.js, and
-          firmware. I love building beautiful and secure software.
+      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-black/40 px-4 text-center backdrop-blur-xs">
+        <h1 className="mb-4 text-5xl font-bold">Hi, I'm Omar 👋</h1>
+        <p className="text-muted-foreground mb-6 max-w-xl text-lg">
+          I'm a software engineer specializing in web and firmware development,
+          with expertise in React, Node.js, and C programming. I build scalable,
+          secure, and user-friendly applications, as well as reliable embedded
+          systems that solve real-world problems.
         </p>
         <button
           onClick={() =>
             document
               .getElementById("section-2")
-              ?.scrollIntoView({ behavior: "smooth", block: "center" })
+              ?.scrollIntoView({ behavior: "smooth" })
           }
-          className="absolute bottom-50 flex justify-center w-12 h-12 items-center mx-auto rounded-full bg-accent text-background text-2xl animate-bounce hover:text-accent-foreground transition"
+          className="bg-accent text-background hover:text-accent-foreground absolute bottom-50 mx-auto flex h-12 w-12 animate-bounce items-center justify-center rounded-full text-2xl transition-transform hover:scale-120"
           aria-label="Scroll to About section"
         >
           ↓

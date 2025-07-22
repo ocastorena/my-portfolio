@@ -3,14 +3,14 @@ import { Button } from "./ui/button";
 export function Navbar() {
   return (
     <nav
-      className="sticky top-0 z-50 backdrop-blur bg-background/70 text-foreground border-b border-muted px-4 py-3 flex justify-between items-center"
+      className="bg-background/70 text-foreground border-muted sticky top-0 z-50 flex items-center justify-between border-b px-4 py-3 backdrop-blur"
       aria-label="Main navigation"
     >
       <span className="text-xl font-bold">Omar Castorena</span>
       <div className="space-x-2">
         <Button
           variant="ghost"
-          className="hover:text-accent hover:underline underline-offset-4 transition"
+          className="transition-transform hover:scale-105"
           onClick={() => {
             document
               .getElementById("projects")
@@ -21,10 +21,10 @@ export function Navbar() {
         </Button>
         <Button
           variant="ghost"
-          className="hover:text-accent hover:underline underline-offset-4 transition"
+          className="transition-transform hover:scale-105"
           onClick={() => {
             document
-              .getElementById("about")
+              .getElementById("section-2")
               ?.scrollIntoView({ behavior: "smooth" });
           }}
         >
@@ -32,7 +32,7 @@ export function Navbar() {
         </Button>
         <Button
           variant="ghost"
-          className="hover:text-accent hover:underline underline-offset-4 transition"
+          className="transition-transform hover:scale-105"
           onClick={() => {
             document
               .getElementById("contact")

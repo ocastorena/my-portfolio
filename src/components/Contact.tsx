@@ -1,20 +1,24 @@
 import { Button } from "./ui/button";
 import { Mail, Download } from "lucide-react";
+import resume from "../../public/omar-castorena-resume.pdf";
 
 export function Contact() {
   return (
     <section
       id="contact"
-      className="py-16 px-4 bg-surface text-surface-foreground text-center"
+      className="bg-surface text-surface-foreground px-4 py-16 text-center"
     >
-      <div className="max-w-xl mx-auto space-y-6">
+      <div className="mx-auto max-w-xl space-y-6">
         <h2 className="text-4xl font-bold">Let's Work Together</h2>
         <p className="text-muted-foreground text-lg">
           Whether you're hiring, looking to collaborate, or just want to say hi
           — feel free to reach out.
         </p>
-        <div className="flex justify-center gap-4 flex-wrap">
-          <a href="mailto:you@example.com" className="inline-flex items-center">
+        <div className="flex flex-wrap justify-center gap-4">
+          <a
+            href="mailto:omarcastorena11@gmail.com"
+            className="inline-flex items-center"
+          >
             <Button
               className="transition-transform hover:scale-105"
               variant="ghost"
@@ -23,11 +27,7 @@ export function Contact() {
               Email Me
             </Button>
           </a>
-          <a
-            href="/omar-castorena-resume.pdf"
-            download
-            className="inline-flex items-center"
-          >
+          <a href={resume} download className="inline-flex items-center">
             <Button
               className="transition-transform hover:scale-105"
               variant="ghost"
