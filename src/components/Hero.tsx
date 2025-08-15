@@ -36,6 +36,11 @@ export function Hero() {
       className="bg-background text-foreground relative -mt-12 h-[calc(96vh+3rem)] w-full"
     >
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-black/40 px-4 text-center backdrop-blur-xs">
+        <img
+          src="./omar-profile.png"
+          alt="Omar Castorena"
+          className="border-accent mb-2 h-24 w-24 rounded-full border-2 object-cover"
+        ></img>
         <h1 className="mb-4 text-5xl font-bold">Hi, I'm Omar 👋</h1>
         <p className="text-muted-foreground mb-6 max-w-xl text-lg">
           I'm a software engineer specializing in web and firmware development,

@@ -1,26 +1,14 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { motion } from "framer-motion";
 
-export function Projects() {
-  const projects = [
-    {
-      title: "Reddit Lite",
-      description:
-        "A Reddit clone built with React, TypeScript, and Tailwind. Supports posting, voting, and comments.",
-      link: "https://redditliteclient.netlify.app/",
-      repo: "https://github.com/ocastorena/reddit-lite",
-    },
-    {
-      title: "E-Commerce Backend",
-      description:
-        "RESTful API with Express, PostgreSQL, and Passport.js authentication. Stripe integration included.",
-      link: "https://e-commerce-app-frontend-maor.onrender.com/",
-      repo: "https://github.com/ocastorena/e-commerce-app-backend",
-    },
-  ];
+import { projects } from "@/data/projects";
 
+export function Projects() {
   return (
-    <section id="projects" className="bg-zinc-950 px-4 py-16 text-white">
+    <section
+      id="projects"
+      className="scroll-mt-15 bg-zinc-950 px-4 py-16 text-white"
+    >
       <h2 className="mb-10 text-center text-4xl font-bold">Projects</h2>
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-3">
         {projects.map((proj, idx) => (

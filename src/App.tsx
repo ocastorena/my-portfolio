@@ -11,7 +11,7 @@ function App() {
     <div className="bg-background text-foreground min-h-screen">
       <Navbar />
       <Hero />
-      <div id="section-2">
+      <div id="section-2" className="scroll-mt-15">
         <About />
         <Skills />
       </div>

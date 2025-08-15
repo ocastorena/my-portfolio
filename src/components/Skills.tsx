@@ -1,47 +1,4 @@
-const skills = {
-  Frontend: [
-    "HTML5",
-    "CSS3",
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Tailwind CSS",
-    "Styled-components",
-    "Redux Toolkit",
-    "React Testing Library",
-    "Jest",
-    "Axios",
-    "Framer Motion",
-    "shadcn/ui",
-  ],
-  Backend: [
-    "Node.js",
-    "Express",
-    "Java EE",
-    "RESTful APIs",
-    "OAuth",
-    "Stripe Integration",
-    "Swagger / OpenAPI",
-    "Supertest",
-    "Mocha/Chai",
-  ],
-  Database: ["PostgreSQL", "SQL"],
-  Tooling: ["Git", "Linux", "Vite", "Docker", "Postman", "Chrome DevTools"],
-  Firmware: [
-    "C Programming",
-    "Diagnostics",
-    "I2C/SMI",
-    "Linux Drivers",
-    "Embedded Systems",
-  ],
-  Security: [
-    "Penetration Test Remediation",
-    "Secure Coding",
-    "Authentication",
-    "Data Encryption",
-  ],
-};
+import { skills } from "@/data/skills";
 
 export function Skills() {
   return (
@@ -55,7 +12,7 @@ export function Skills() {
                 {category}
               </h3>
               <ul className="text-muted-foreground flex flex-wrap gap-2">
-                {items.map((skill) => (
+                {items.map((skill: string) => (
                   <li
                     key={skill}
                     className="bg-background border-muted rounded-md border px-3 py-1 text-sm transition hover:scale-[1.02] hover:shadow-[0_0_12px_var(--color-brand-glow)]"
