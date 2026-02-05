@@ -9,6 +9,11 @@ export function Hero() {
   );
 
   useEffect(() => {
+    // Skip WebGL/Vanta initialization in Vitest/JSDOM.
+    if (import.meta.env.MODE === "test") {
+      return;
+    }
+
     if (!vantaEffect) {
       setVantaEffect(
         NET({

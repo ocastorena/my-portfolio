@@ -54,6 +54,10 @@ cd your-repo-name
 npm install
 ```
 
+**Node version:**
+
+This project uses Node.js 22 (see `.nvmrc`).
+
 **Run locally:**
 
 ```bash
@@ -70,6 +74,10 @@ npm run build
 
 This site is automatically deployed via GitHub Pages.
 See the deploy script in package.json for details.
+
+**GitHub Pages settings:**
+
+In the repo settings, go to `Settings` → `Pages` and set `Source` to `GitHub Actions`.
 
 ## ✨ Live Demo
 
