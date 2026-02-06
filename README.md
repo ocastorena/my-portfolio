@@ -101,6 +101,16 @@ This site is automatically deployed via GitHub Pages using GitHub Actions on pus
 
 In the repo settings, go to `Settings` → `Pages` and set `Source` to `GitHub Actions`.
 
+**Rollback:**
+
+If a deployment is bad, revert the offending commit on `main` and push the revert.
+GitHub Actions will redeploy the previous stable build.
+
+## ✨ Live Demo
+
+Check out the live portfolio:
+https://ocastorena.github.io/my-portfolio
+
 ## 📫 Contact
 
 - Email: omarcastorena11@gmail.com
