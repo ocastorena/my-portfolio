@@ -1,20 +1,21 @@
 # Omar Castorena – Software Developer Portfolio
 
-[![CD](https://github.com/ocastorena/my-portfolio/actions/workflows/pages.yml/badge.svg?branch=main)](https://github.com/ocastorena/my-portfolio/actions/workflows/pages.yml)
-[![CI](https://github.com/ocastorena/my-portfolio/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/ocastorena/my-portfolio/actions/workflows/ci.yml)
+[![Deploy Pages](https://github.com/ocastorena/my-portfolio/actions/workflows/pages.yml/badge.svg?branch=main)](https://github.com/ocastorena/my-portfolio/actions/workflows/pages.yml)
+[![CI](https://github.com/ocastorena/my-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/ocastorena/my-portfolio/actions/workflows/ci.yml)
 [![Code size](https://img.shields.io/github/languages/code-size/ocastorena/my-portfolio)](https://github.com/ocastorena/my-portfolio)
 [![Top language](https://img.shields.io/github/languages/top/ocastorena/my-portfolio)](https://github.com/ocastorena/my-portfolio)
 [![Last commit](https://img.shields.io/github/last-commit/ocastorena/my-portfolio)](https://github.com/ocastorena/my-portfolio/commits/main)
 [![License](https://img.shields.io/github/license/ocastorena/my-portfolio)](https://github.com/ocastorena/my-portfolio/blob/main/LICENSE)
 
-Welcome to my developer portfolio! This site showcases my featured software projects, skills, and experience.  
-You can view the live site here: https://ocastorena.github.io/my-portfolio
+Welcome to my developer portfolio. This site showcases my featured software projects, skills, and experience.
+
+Live site: https://ocastorena.github.io/my-portfolio
 
 ## 🚀 About This Project
 
-This portfolio is built with **React**, **Vite**, **Tailwind CSS**, and **shadcn/ui** components, and deployed using **GitHub Pages**.
+This portfolio is built with React, Vite, Tailwind CSS, and shadcn/ui components, and deployed using GitHub Pages.
 
-- **Purpose:**  
+- **Purpose:**
   Display my best projects, technical skills, and background to employers, collaborators, and the tech community.
 
 - **Key Features:**
@@ -38,12 +39,13 @@ my-portfolio/
 ├── public/
 ├── src/
 │   ├── components/
-│   ├── pages/
-│   ├── App.jsx
-│   └── main.jsx
+│   ├── data/
+│   ├── test/
+│   ├── App.tsx
+│   └── main.tsx
 ├── package.json
-├── tailwind.config.js
-└── vite.config.js
+├── tsconfig.json
+└── vite.config.ts
 ```
 
 ## 🧑‍💻 Getting Started
@@ -51,8 +53,8 @@ my-portfolio/
 **Clone the repo:**
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/ocastorena/my-portfolio.git
+cd my-portfolio
 ```
 
 **Install dependencies:**
@@ -77,10 +79,23 @@ npm run dev
 npm run build
 ```
 
+**Run tests:**
+
+```bash
+npm run test
+```
+
+**Scripts:**
+
+- `npm run dev` — Start the dev server.
+- `npm run build` — Build for production.
+- `npm run lint` — Lint the codebase.
+- `npm run typecheck` — Type-check TypeScript.
+- `npm run test` — Run unit tests.
+
 ## 🌐 Deployment
 
-This site is automatically deployed via GitHub Pages using GitHub Actions
-on push/merge to `main`.
+This site is automatically deployed via GitHub Pages using GitHub Actions on push/merge to `main`.
 
 **GitHub Pages settings:**
 
@@ -98,8 +113,8 @@ https://ocastorena.github.io/my-portfolio
 
 ## 📫 Contact
 
-- [Email]()
-- [LinkedIn]()
+- Email: omarcastorena11@gmail.com
+- LinkedIn: https://linkedin.com/in/omar-castorena
 
 ## 📜 License
 
