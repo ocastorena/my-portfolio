@@ -1,7 +1,7 @@
 # Omar Castorena – Software Developer Portfolio
 
 [![Deploy Pages](https://github.com/ocastorena/my-portfolio/actions/workflows/pages.yml/badge.svg?branch=main)](https://github.com/ocastorena/my-portfolio/actions/workflows/pages.yml)
-[![CI](https://github.com/ocastorena/my-portfolio/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/ocastorena/my-portfolio/actions/workflows/ci.yml)
+[![CI](https://github.com/ocastorena/my-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/ocastorena/my-portfolio/actions/workflows/ci.yml)
 [![Code size](https://img.shields.io/github/languages/code-size/ocastorena/my-portfolio)](https://github.com/ocastorena/my-portfolio)
 [![Top language](https://img.shields.io/github/languages/top/ocastorena/my-portfolio)](https://github.com/ocastorena/my-portfolio)
 [![Last commit](https://img.shields.io/github/last-commit/ocastorena/my-portfolio)](https://github.com/ocastorena/my-portfolio/commits/main)
