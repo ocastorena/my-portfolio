@@ -86,6 +86,11 @@ on push/merge to `main`.
 
 In the repo settings, go to `Settings` → `Pages` and set `Source` to `GitHub Actions`.
 
+**Rollback:**
+
+If a deployment is bad, revert the offending commit on `main` and push the revert.
+GitHub Actions will redeploy the previous stable build.
+
 ## ✨ Live Demo
 
 Check out the live portfolio:
