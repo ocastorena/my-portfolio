@@ -1,5 +1,7 @@
 # Omar Castorena – Software Developer Portfolio
 
+[![Deploy Pages](https://github.com/ocastorena/my-portfolio/actions/workflows/pages.yml/badge.svg)](https://github.com/ocastorena/my-portfolio/actions/workflows/pages.yml)
+
 Welcome to my developer portfolio! This site showcases my featured software projects, skills, and experience.  
 You can view the live site here: https://ocastorena.github.io/my-portfolio
 
@@ -72,8 +74,8 @@ npm run build
 
 ## 🌐 Deployment
 
-This site is automatically deployed via GitHub Pages.
-See the deploy script in package.json for details.
+This site is automatically deployed via GitHub Pages using GitHub Actions
+on push/merge to `main`.
 
 **GitHub Pages settings:**
 
