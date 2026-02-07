@@ -12,9 +12,7 @@ test("renders contact section with actions", () => {
   const emailLink = screen.getByRole("link", { name: /email me/i });
   expect(emailLink).toHaveAttribute("href", `mailto:${SITE_CONFIG.email}`);
 
-  const downloadLink = screen.getByRole("link", { name: /download resume/i });
-  expect(downloadLink.getAttribute("href")).toMatch(
-    new RegExp(`${SITE_CONFIG.resumeFileName}$`),
-  );
-  expect(downloadLink).toHaveAttribute("download", SITE_CONFIG.resumeFileName);
+  expect(
+    screen.getByRole("button", { name: /download resume/i }),
+  ).toBeInTheDocument();
 });

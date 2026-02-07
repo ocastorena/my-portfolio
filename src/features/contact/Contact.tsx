@@ -3,6 +3,30 @@ import { SITE_CONFIG } from "@/config/site";
 import { Mail, Download } from "lucide-react";
 
 export function Contact() {
+  const resumeUrl = `${import.meta.env.BASE_URL}${SITE_CONFIG.resumeFileName}`;
+
+  async function handleResumeDownload() {
+    try {
+      const response = await fetch(resumeUrl, { cache: "no-store" });
+
+      if (!response.ok) {
+        throw new Error("Resume file is not available.");
+      }
+
+      const blob = await response.blob();
+      const objectUrl = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = objectUrl;
+      link.download = SITE_CONFIG.resumeFileName;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(objectUrl);
+    } catch {
+      window.open(resumeUrl, "_blank", "noopener,noreferrer");
+    }
+  }
+
   return (
     <section
       id="contact"
@@ -21,14 +45,16 @@ export function Contact() {
               Email Me
             </a>
           </Button>
-          <Button asChild className="transition-transform hover:scale-105" variant="ghost">
-            <a
-              href={`${import.meta.env.BASE_URL}${SITE_CONFIG.resumeFileName}`}
-              download={SITE_CONFIG.resumeFileName}
-            >
-              <Download className="mr-2 h-4 w-4" />
-              Download Resume
-            </a>
+          <Button
+            className="transition-transform hover:scale-105"
+            variant="ghost"
+            type="button"
+            onClick={() => {
+              void handleResumeDownload();
+            }}
+          >
+            <Download className="mr-2 h-4 w-4" />
+            Download Resume
           </Button>
         </div>
       </div>
