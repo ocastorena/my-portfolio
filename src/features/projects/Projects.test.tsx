@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { Projects } from "./Projects";
-import { projects } from "@/data/projects";
+import { projects } from "@/content/projects";
 
 test("renders projects list", () => {
   render(<Projects />);

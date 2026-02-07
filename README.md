@@ -1,7 +1,7 @@
 # Omar Castorena – Software Developer Portfolio
 
 [![Deploy Pages](https://github.com/ocastorena/my-portfolio/actions/workflows/pages.yml/badge.svg?branch=main)](https://github.com/ocastorena/my-portfolio/actions/workflows/pages.yml)
-[![CI](https://github.com/ocastorena/my-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/ocastorena/my-portfolio/actions/workflows/ci.yml)
+[![CI](https://github.com/ocastorena/my-portfolio/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/ocastorena/my-portfolio/actions/workflows/ci.yml)
 [![Code size](https://img.shields.io/github/languages/code-size/ocastorena/my-portfolio)](https://github.com/ocastorena/my-portfolio)
 [![Top language](https://img.shields.io/github/languages/top/ocastorena/my-portfolio)](https://github.com/ocastorena/my-portfolio)
 [![Last commit](https://img.shields.io/github/last-commit/ocastorena/my-portfolio)](https://github.com/ocastorena/my-portfolio/commits/main)
@@ -39,6 +39,9 @@ my-portfolio/
 ├── public/
 ├── src/
 │   ├── components/
+│   │   ├── layout/
+│   │   ├── sections/
+│   │   └── ui/
 │   ├── data/
 │   ├── test/
 │   ├── App.tsx
@@ -92,6 +95,8 @@ npm run test
 - `npm run lint` — Lint the codebase.
 - `npm run typecheck` — Type-check TypeScript.
 - `npm run test` — Run unit tests.
+- `npm run test:watch` — Run tests in watch mode.
+- `npm run format` — Format code with Prettier.
 
 ## 🌐 Deployment
 
@@ -105,11 +110,6 @@ In the repo settings, go to `Settings` → `Pages` and set `Source` to `GitHub A
 
 If a deployment is bad, revert the offending commit on `main` and push the revert.
 GitHub Actions will redeploy the previous stable build.
-
-## ✨ Live Demo
-
-Check out the live portfolio:
-https://ocastorena.github.io/my-portfolio
 
 ## 📫 Contact
 

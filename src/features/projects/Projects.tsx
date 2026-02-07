@@ -1,7 +1,7 @@
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from "framer-motion";
 
-import { projects } from "@/data/projects";
+import { projects } from "@/content/projects";
 
 export function Projects() {
   return (

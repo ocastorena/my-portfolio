@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import * as THREE from "three";
-import NET from "vanta/src/vanta.net";
+import omarProfile from "@/assets/omar-profile.png";
+import { SECTION_IDS } from "@/config/sections";
+import { scrollToId } from "@/lib/scroll";
 
 export function Hero() {
   const heroRef = useRef(null);
-  const [vantaEffect, setVantaEffect] = useState<ReturnType<typeof NET> | null>(
+  const [vantaEffect, setVantaEffect] = useState<{ destroy: () => void } | null>(
     null,
   );
 
@@ -14,23 +15,46 @@ export function Hero() {
       return;
     }
 
-    if (!vantaEffect) {
-      setVantaEffect(
-        NET({
-          el: heroRef.current,
-          THREE,
-          mouseControls: true,
-          touchControls: false,
-          minHeight: 200.0,
-          minWidth: 200.0,
-          scale: 1.0,
-          scaleMobile: 1.0,
-          color: 0x22d3ee,
-          backgroundColor: 0x0a0d13,
-        }),
-      );
+    let isMounted = true;
+
+    async function initVanta() {
+      if (vantaEffect || !heroRef.current) {
+        return;
+      }
+
+      const threeModule = await import("three");
+      const THREE = Object.assign({}, threeModule, {
+        // Vanta's net effect still references legacy THREE.VertexColors.
+        // Map it to the modern boolean form to avoid runtime warnings.
+        VertexColors: true,
+      });
+      (globalThis as { THREE?: typeof THREE }).THREE = THREE;
+      const { default: NET } = await import("vanta/src/vanta.net");
+
+      if (!isMounted) {
+        return;
+      }
+
+      const effect = NET({
+        el: heroRef.current,
+        THREE,
+        mouseControls: true,
+        touchControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0x22d3ee,
+        backgroundColor: 0x0a0d13,
+      });
+
+      setVantaEffect(effect);
     }
+
+    void initVanta();
+
     return () => {
+      isMounted = false;
       vantaEffect?.destroy();
     };
   }, [vantaEffect]);
@@ -42,7 +66,7 @@ export function Hero() {
     >
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-black/40 px-4 text-center backdrop-blur-xs">
         <img
-          src="./omar-profile.png"
+          src={omarProfile}
           alt="Omar Castorena"
           className="border-accent mb-2 h-24 w-24 rounded-full border-2 object-cover"
         ></img>
@@ -54,11 +78,7 @@ export function Hero() {
           systems that solve real-world problems.
         </p>
         <button
-          onClick={() =>
-            document
-              .getElementById("section-2")
-              ?.scrollIntoView({ behavior: "smooth" })
-          }
+          onClick={() => scrollToId(SECTION_IDS.about)}
           className="bg-accent text-background hover:text-accent-foreground absolute bottom-50 mx-auto flex h-12 w-12 animate-bounce items-center justify-center rounded-full text-2xl transition-transform hover:scale-120"
           aria-label="Scroll to About section"
         >

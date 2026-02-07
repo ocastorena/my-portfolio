@@ -1,6 +1,6 @@
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
+import { SITE_CONFIG } from "@/config/site";
 import { Mail, Download } from "lucide-react";
-import resume from "../../public/omar-castorena-resume.pdf";
 
 export function Contact() {
   return (
@@ -15,27 +15,21 @@ export function Contact() {
           — feel free to reach out.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <a
-            href="mailto:omarcastorena11@gmail.com"
-            className="inline-flex items-center"
-          >
-            <Button
-              className="transition-transform hover:scale-105"
-              variant="ghost"
-            >
+          <Button asChild className="transition-transform hover:scale-105" variant="ghost">
+            <a href={`mailto:${SITE_CONFIG.email}`}>
               <Mail className="mr-2 h-4 w-4" />
               Email Me
-            </Button>
-          </a>
-          <a href={resume} download className="inline-flex items-center">
-            <Button
-              className="transition-transform hover:scale-105"
-              variant="ghost"
+            </a>
+          </Button>
+          <Button asChild className="transition-transform hover:scale-105" variant="ghost">
+            <a
+              href={`${import.meta.env.BASE_URL}${SITE_CONFIG.resumeFileName}`}
+              download={SITE_CONFIG.resumeFileName}
             >
               <Download className="mr-2 h-4 w-4" />
               Download Resume
-            </Button>
-          </a>
+            </a>
+          </Button>
         </div>
       </div>
     </section>

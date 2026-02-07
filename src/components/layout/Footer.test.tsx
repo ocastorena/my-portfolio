@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import { SITE_CONFIG } from "@/config/site";
 import { Footer } from "./Footer";
 
 test("renders footer with current year and links", () => {
@@ -9,10 +10,10 @@ test("renders footer with current year and links", () => {
 
   expect(screen.getByRole("link", { name: /linkedin/i })).toHaveAttribute(
     "href",
-    "https://linkedin.com/in/omar-castorena",
+    SITE_CONFIG.social.linkedin,
   );
   expect(screen.getByRole("link", { name: /github/i })).toHaveAttribute(
     "href",
-    "https://github.com/ocastorena",
+    SITE_CONFIG.social.github,
   );
 });

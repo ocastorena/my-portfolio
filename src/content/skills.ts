@@ -1,11 +1,4 @@
-export interface Skills {
-  "Programming Languages": string[];
-  "Frontend Development": string[];
-  "Backend Development": string[];
-  "Database & Storage": string[];
-  "Development Tools": string[];
-  "Firmware & Systems": string[];
-}
+import type { Skills } from "@/types/skills";
 
 export const skills: Skills = {
   "Programming Languages": [
