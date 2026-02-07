@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import { SITE_CONFIG } from "@/config/site";
 import { Contact } from "./Contact";
 
 test("renders contact section with actions", () => {
@@ -9,8 +10,11 @@ test("renders contact section with actions", () => {
   ).toBeInTheDocument();
 
   const emailLink = screen.getByRole("link", { name: /email me/i });
-  expect(emailLink).toHaveAttribute("href", "mailto:omarcastorena11@gmail.com");
+  expect(emailLink).toHaveAttribute("href", `mailto:${SITE_CONFIG.email}`);
 
   const downloadLink = screen.getByRole("link", { name: /download resume/i });
-  expect(downloadLink).toHaveAttribute("download");
+  expect(downloadLink.getAttribute("href")).toMatch(
+    new RegExp(`${SITE_CONFIG.resumeFileName}$`),
+  );
+  expect(downloadLink).toHaveAttribute("download", SITE_CONFIG.resumeFileName);
 });

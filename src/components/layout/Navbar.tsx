@@ -1,4 +1,6 @@
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
+import { SECTION_IDS } from "@/config/sections";
+import { scrollToId } from "@/lib/scroll";
 
 export function Navbar() {
   return (
@@ -11,33 +13,21 @@ export function Navbar() {
         <Button
           variant="ghost"
           className="transition-transform hover:scale-105"
-          onClick={() => {
-            document
-              .getElementById("projects")
-              ?.scrollIntoView({ behavior: "smooth" });
-          }}
+          onClick={() => scrollToId(SECTION_IDS.projects)}
         >
           Projects
         </Button>
         <Button
           variant="ghost"
           className="transition-transform hover:scale-105"
-          onClick={() => {
-            document
-              .getElementById("section-2")
-              ?.scrollIntoView({ behavior: "smooth" });
-          }}
+          onClick={() => scrollToId(SECTION_IDS.about)}
         >
           About
         </Button>
         <Button
           variant="ghost"
           className="transition-transform hover:scale-105"
-          onClick={() => {
-            document
-              .getElementById("contact")
-              ?.scrollIntoView({ behavior: "smooth" });
-          }}
+          onClick={() => scrollToId(SECTION_IDS.contact)}
         >
           Contact
         </Button>

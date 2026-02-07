@@ -1,17 +1,13 @@
-import { Navbar } from "./components/Navbar";
-import { Hero } from "./components/Hero";
-import { About } from "./components/About";
-import { Skills } from "./components/Skills";
-import { Projects } from "./components/Projects";
-import { Contact } from "./components/Contact";
-import { Footer } from "./components/Footer";
+import { Footer, Navbar } from "./components/layout";
+import { About, Contact, Hero, Projects, Skills } from "./features";
+import { SECTION_IDS } from "./config/sections";
 
 function App() {
   return (
     <div className="bg-background text-foreground min-h-screen">
       <Navbar />
       <Hero />
-      <div id="section-2" className="scroll-mt-15">
+      <div id={SECTION_IDS.about} className="scroll-mt-15">
         <About />
         <Skills />
       </div>
